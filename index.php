@@ -31,6 +31,12 @@ if(!empty($_POST)){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube remake</title>
+    <style>
+#review{
+    width:500px;
+    height:300px;
+}
+    </style>
 </head>
 <body>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=twI61ZGDECBr4ums" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -40,7 +46,7 @@ if(!empty($_POST)){
    <form action="" method="post">
         <input type="text" placeholder="..vul hier je naam in" name="naam">
         <br>
-        <textarea id="w3review"  placeholder="..vul hier je bericht in" name="message"  rows="4" cols="50"></textarea>
+        <textarea id="review" placeholder="..vul hier je bericht in" name="message"></textarea>
         <br>
         <input type="submit" value="versturen">
 
