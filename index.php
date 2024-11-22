@@ -33,8 +33,15 @@ if(!empty($_POST)){
     <title>Youtube remake</title>
     <style>
 #review{
-    width:500px;
-    height:300px;
+    width:100px;
+    height:100px;
+}
+.bericht{
+    background: grey;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 10px;
+    padding: 10px;
+    margin:10px;
 }
     </style>
 </head>
@@ -44,9 +51,9 @@ if(!empty($_POST)){
    
    <h2>hier komt het formulier om een bericht te versturen</h2>
    <form action="" method="post">
-        <input type="text" placeholder="..vul hier je naam in" name="naam">
+        <input required type="text" placeholder="..vul hier je naam in" name="naam">
         <br>
-        <textarea id="review" placeholder="..vul hier je bericht in" name="message"></textarea>
+        <textarea required id="review" placeholder="..vul hier je bericht in" name="message"></textarea>
         <br>
         <input type="submit" value="versturen">
 
@@ -56,8 +63,16 @@ if(!empty($_POST)){
     <p>Maak hier je eigen pagina van aan de hand van de opdracht</p>
 
 <?php
-echo "<pre>".var_dump($getReactions)."</pre>";
-echo ("<h2>".count($getReactions)."</h2>");
+//echo "<pre>".var_dump($getReactions)."</pre>";
+
+echo ("<h2>Er zijn ".count($getReactions)." reactie</h2>");
+
+for ($i=0; $i < count($getReactions); $i++) { 
+    echo("<div class='bericht'>");
+    echo($getReactions[$i]['name']." -- ");
+    echo($getReactions[$i]['message']."<br>");
+    echo("</div>");    
+}
 ?>
 
 
