@@ -2,12 +2,8 @@
 include("config.php");
 include("reactions.php");
 
-$getReactions = Reactions::getReactions();
-//uncomment de volgende regel om te kijken hoe de array van je reactions eruit ziet
-
 
 if(!empty($_POST)){
-
     //dit is een voorbeeld array.  Deze waardes moeten erin staan.
     $postArray = [
         'name' => $_POST['naam'],
@@ -20,9 +16,11 @@ if(!empty($_POST)){
     if(isset($setReaction['error']) && $setReaction['error'] != ''){
         prettyDump($setReaction['error']);
     }
-    
-
 }
+
+$getReactions = Reactions::getReactions();
+//uncomment de volgende regel om te kijken hoe de array van je reactions eruit ziet
+
 
 ?>
 <!DOCTYPE html>
