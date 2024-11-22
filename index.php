@@ -34,17 +34,23 @@ $getReactions = Reactions::getReactions();
     width:100px;
     height:100px;
 }
+body{
+    background: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .bericht{
     background: grey;
     box-shadow: 2px 2px 2px black;
     border-radius: 10px;
     padding: 10px;
     margin:10px;
+    display: inline-block;
 }
     </style>
 </head>
 <body>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=twI61ZGDECBr4ums" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vfN2rN9P3CI?si=bUlIdHZUCg0fy4SR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
    
    <h2>hier komt het formulier om een bericht te versturen</h2>
